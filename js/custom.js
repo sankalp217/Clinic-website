@@ -44,3 +44,38 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+
+
+/** OnScroll float button js **/
+// Get the button:
+let mybutton = document.getElementById("float-button");
+let wpbutton = document.getElementById("wp-image")
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    mybutton.style.display = "block";
+    mybutton.style.animation= "fbmoveUp 700ms linear";
+
+    wpbutton.style.bottom = "120px";
+    wpbutton.style.animation= "wpmoveUp 700ms linear";
+    
+    
+  } else {
+    mybutton.style.display = "none";
+    
+    wpbutton.style.bottom = "50px";
+    wpbutton.style.animation= "wpmoveDown 500ms linear";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+
+
