@@ -1,3 +1,6 @@
+
+/* ------ maximum-width section ----------- */
+
 @media (max-width: 1299px) {
   .hero_area .hero_bg_box {
     top: 0;
@@ -9,13 +12,15 @@
 
 @media (max-width: 1120px) {}
 
+
 @media (max-width: 992px) {
   .hero_area {
     min-height: auto;
   }
 
   .slider_section .detail-box {
-    margin-bottom: 45px;
+    //margin-bottom: 15px;
+    margin: 0px 10px 15px 10px;
   }
 
   .custom_nav-container .navbar-nav {
@@ -39,6 +44,7 @@
   }
 
 }
+
 
 @media (max-width: 767px) {
 
@@ -64,17 +70,62 @@
   }
 }
 
+
 @media (max-width: 576px) {}
 
+
 @media (max-width: 480px) {
+
+  .hero_area .hero_bg_box img{
+    width: 100%;
+    height: -webkit-fill-available;
+    object-position: center right;
+    position: absolute;
+    top: 84px;
+
+    filter: brightness(0.5);
+  }
+
+  #navbar{
+    background-color: #1fab89;
+  }
+
+  .slider_section{
+    padding: 15px 0px 170px 0;
+  }
+
+  .slider_section .detail-box{
+    margin: 0px 25px;
+  }
+
   .slider_section .detail-box h1 {
     font-size: 2rem;
   }
 
+  .features{
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .feature-item{
+    margin: 0px 10px;
+    padding: 20px 20px 10px 20px;
+  }
+
+  .layout_padding{
+    padding: 20px 0px;
+  }
+
+  .department_section .department_container .box .detail-box p{
+    padding: 0px 25px;
+  }
+
   .about_section {
-    /* border-radius: 90px; */
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 40px 20px 40px 20px;
+    text-align:justify;
+  }
+
+  .heading_container{
+    align-items:center;
   }
 
   .about_department .img-box img {
@@ -82,22 +133,85 @@
     border-radius: 15px;
   }
 
+  .doctor-padding{
+    padding: 50px 0px;
+  }
+
+  .doctor_section .container .row{
+    margin: 0px 15px;
+  }
+
+  .doctor_section .heading_container{
+    padding: 0px 15px;
+  }
+
+  .doctor_section .box .detail-box .social_box{
+    top:0;
+    opacity:1;
+  }
+
+  .doctor_section .box .detail-box .social_box a{
+    color: #1fab89;
+    margin: -1px 15px;
+  }
+
+  .doctor_section .box .detail-box .social_box a .fa{
+    font-size: larger;
+  }
+
+  .carousel-item{
+    padding: 0px 20px;
+  }
+
+  .contact_section{
+    padding: 50px 25px;
+  }
+
+  .contact_section .form_container button {
+    margin-top: 10px;
+  }
+
+  .contact_section .form_container textarea.message-box{
+    height: 125px;
+  }
+
+  .contact_section .map_container{
+    height: 100%;
+  }
+
+  .footer_section{
+    padding: 40px 15px 15px 15px;
+  }
+
+  .footer_section .footer-info p{
+    margin-bottom: 10px;
+    padding: 0px 0px;
+  }
+
+  #float-button {
+    bottom: 30px;
+    right: 25px;
+  }
+
+  #wp-image{
+    right: 19px;
+  }
+
+  
 }
+
 
 @media (max-width: 420px) {}
 
+
 @media (max-width: 376px) {}
 
+
+
+/* ------ minimum-width section ----------- */
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
   }
   
 }
-
-/* @media (min-width: 480px) {
-  .about_department .img-box img {
-    width: 90%;
-    border-radius: 15px;
-  }
-} */
