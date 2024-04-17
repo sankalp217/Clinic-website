@@ -11,6 +11,24 @@ html{
   scroll-behavior: smooth;;
 }
 
+/*------ScrollBar------*/
+
+#scrollbar1::-webkit-scrollbar {
+  width: 10px;
+}
+
+#scrollbar1::-webkit-scrollbar-track {
+  /* background-color: #e7e7e7;
+  border: 1px solid #cacaca; */
+}
+
+#scrollbar1::-webkit-scrollbar-thumb {
+  
+  border-radius: 8px;
+  background-color: #1fab89;
+}
+
+
 .layout_padding {
   padding: 90px 0;
 }
@@ -69,6 +87,10 @@ html{
   font-weight: bold;
   margin-bottom: 0;
   text-transform: uppercase;
+}
+
+.sub-head{
+  color: #4d4d4d;
 }
 
 .heading_container p {
@@ -290,6 +312,8 @@ a:focus {
 }
 
 /*end header section*/
+
+
 /* slider section */
 .slider_section {
   -webkit-box-flex: 1;
@@ -326,6 +350,8 @@ a:focus {
   /* text-transform: uppercase; */
   margin-bottom: 15px;
   color: #ffffff;
+  height:116px;
+  align-content:end;
 }
 
 .slider_section .detail-box p {
@@ -389,7 +415,7 @@ a:focus {
 }
 
 .slider_section .carousel-indicators li {
-  background-color: #ffffff;
+  background-color: #B8B8B8;
   width: 12px;
   height: 12px;
   border-radius: 100%;
@@ -399,6 +425,8 @@ a:focus {
 .slider_section .carousel-indicators li.active {
   width: 20px;
   height: 20px;
+  background-color: #ffffff;
+  /* border:1px solid #1fab89; */
 }
 
 .department_section {
@@ -546,6 +574,10 @@ a:focus {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 } */
 
+.doctor-padding{
+  padding: 100px 0px;
+}
+
 .doctor_department, .doctor_section .box:hover{
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
@@ -641,6 +673,10 @@ a:focus {
   opacity: 1;
 }
 
+.doctor_section .box .detail-box .social_box a .fa {
+  font-size: large;
+}
+
 .doctor_section .btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -679,6 +715,10 @@ a:focus {
   text-transform: uppercase;
 }
 
+.contact_section .heading_container p{
+  text-align: center;
+}
+
 .contact_section .form_container input {
   width: 100%;
   border: none;
@@ -688,6 +728,7 @@ a:focus {
   outline: none;
   color: #101010;
   background: #eeeeee;
+  border-radius: 4px;
 }
 
 .contact_section .form_container input::-webkit-input-placeholder {
@@ -714,6 +755,7 @@ a:focus {
   padding: 15px 20px;
   outline: none;
   background: #eeeeee;
+  border-radius: 4px;
 }
 
 .contact_section .form_container textarea::-webkit-input-placeholder {
@@ -854,7 +896,7 @@ a:focus {
   background-color: #1fab89;
   background-position: center;
   border-radius: 5px;
-  margin: 0 2.5px;
+  margin: 0 10px;
 }
 
 .client_section .carousel-control-prev:hover,
@@ -871,6 +913,12 @@ a:focus {
   color: #ffffff;
   padding: 60px 0 15px 0;
   position: relative;
+}
+
+.footer-logo{
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer_section h4 {
@@ -925,7 +973,7 @@ a:focus {
           align-items: center;
   color: #ffffff;
   border-radius: 100%;
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 24px;
 }
 
@@ -1074,7 +1122,128 @@ a:focus {
 }
 
 .divider {
-  width: 100px;
+  
   height: 5px;
   background: #fff;
+  border-radius: 55px; 
+  animation: animate 7s ease-in-out; 
 }
+
+@keyframes animate { 
+  0% { 
+      width: 0%; 
+  } 
+
+  100% { 
+      width: 30%; 
+  } 
+
+} 
+
+/* ---- Whatsapp and up arrow floating buttons ---- */
+#wp-image{
+  position: fixed;
+  bottom: 50px;
+  right: 45px;
+  border: none;
+  background: transparent;
+  display: block;
+}
+
+@keyframes wpmoveUp {
+  from {bottom: 50px;}
+  to {bottom: 120px;}
+}
+
+@keyframes wpmoveDown {
+  from {bottom: 120px;}
+  to {bottom: 50px;}
+}
+
+@keyframes fbmoveUp {
+  from {bottom: -35px;}
+  to {bottom: 50px;}
+}
+
+#wp-image img{
+  height: 60px;
+  width: 60px;
+}
+
+#float-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width:60px;
+	height:60px;
+  border-radius:50px;
+  background-color: #ffffff;
+  color: white;
+  
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  text-align:center;
+
+  z-index:99;
+  display:none;
+
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#float-button i{
+  color:#1fab89;
+  font-size: 1.2em;
+  font-size:25px;
+}
+
+#float-button:hover {
+  background-color: #1fab89;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#float-button:hover i{
+  color:#ffffff;
+}
+
+/* ---- slider detail typing effect ---- */
+
+/* .typewriter h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 0;
+  animation: typing;
+  animation-duration: 1.5s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+}
+
+/* The typing effect */
+/* @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+} */
+
+.typing-demo {
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#ffffff 5px,#0000 0) 10px 0,
+    linear-gradient(#ffffff 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 100%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .3s infinite steps(1),   
+    t calc(var(--n)*.1s) steps(var(--n)) forwards;
+}
+
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+
